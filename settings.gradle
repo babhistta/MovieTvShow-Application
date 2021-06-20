@@ -1,0 +1,4 @@
+include ':fav'
+include ':core'
+include ':app'
+rootProject.name = "MovieTvShowApp"
