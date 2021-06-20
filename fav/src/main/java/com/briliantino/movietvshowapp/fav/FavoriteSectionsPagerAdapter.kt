@@ -9,7 +9,7 @@ import com.briliantino.movietvshowapp.R
 import com.briliantino.movietvshowapp.fav.fragment.FavoriteMovieFragment
 import com.briliantino.movietvshowapp.fav.fragment.FavoriteTvShowFragment
 
-class FavoriteSectionsPagerAdapter(private val mContext: Context, fm: FragmentManager) : FragmentPagerAdapter(fm, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT) {
+class FavoriteSectionsPagerAdapter(private val mContext: Context, manager: FragmentManager) : FragmentPagerAdapter(manager, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT) {
 
     companion object {
         @StringRes
