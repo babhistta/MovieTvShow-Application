@@ -2,6 +2,7 @@ package com.briliantino.movietvshowapp.core.data.remote
 
 import android.annotation.SuppressLint
 import android.util.Log
+import com.briliantino.movietvshowapp.core.BuildConfig
 import com.briliantino.movietvshowapp.core.data.remote.network.ApiResponse
 import com.briliantino.movietvshowapp.core.data.remote.network.ApiService
 import com.briliantino.movietvshowapp.core.data.remote.response.MovieResponse
@@ -19,7 +20,7 @@ import javax.inject.Singleton
 class RemoteDataSource @Inject constructor(private val apiService: ApiService){
 
     companion object {
-        private const val API_KEY = "f364f6400d13810c6ddabbb86029c969"
+        private const val API_KEY = BuildConfig.MOVIES_TOKEN
         private const val LANGUAGE = "en-US"
         private const val CATEGORY = "popular"
         private const val PAGE = 1

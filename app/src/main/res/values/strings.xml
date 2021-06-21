@@ -2,14 +2,12 @@
     <string name="app_name">Movie &amp; Tv Show</string>
 
     <string name="movie">Movie</string>
-    <string name="tvshow">Tv Show</string>
     <string name="title">Title</string>
     <string name="description">Description</string>
     <string name="rating">Rating</string>
     <string name="vote">Vote : %s</string>
     <string name="menu">menu</string>
     <string name="poster">poster</string>
-    <string name="txtdescription">Description :</string>
-    <string name="title_maps">Maps</string>
+    <string name="txtDescription">Description :</string>
     <string name="title_fav">Favorite</string>
 </resources>

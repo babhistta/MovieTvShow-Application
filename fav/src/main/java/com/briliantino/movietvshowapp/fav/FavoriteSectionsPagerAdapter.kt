@@ -13,7 +13,7 @@ class FavoriteSectionsPagerAdapter(private val mContext: Context, manager: Fragm
 
     companion object {
         @StringRes
-        private val TAB_TITLES = intArrayOf(R.string.movie, R.string.tvshow)
+        private val TAB_TITLES = intArrayOf(R.string.movie, R.string.tvShow)
     }
 
     override fun getItem(position: Int): Fragment =

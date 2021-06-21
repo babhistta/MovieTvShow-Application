@@ -14,7 +14,6 @@ import com.briliantino.movietvshowapp.core.ui.TvShowAdapter
 import com.briliantino.movietvshowapp.di.FavoriteModuleDependencies
 import com.briliantino.movietvshowapp.fav.DaggerFavoriteComponent
 import com.briliantino.movietvshowapp.fav.ViewModelFactory
-import com.briliantino.movietvshowapp.fav.databinding.FragmentFavoriteMovieBinding
 import com.briliantino.movietvshowapp.fav.databinding.FragmentFavoriteTvShowBinding
 import dagger.hilt.android.EntryPointAccessors
 import javax.inject.Inject
