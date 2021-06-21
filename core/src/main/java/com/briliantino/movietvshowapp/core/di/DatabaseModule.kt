@@ -25,7 +25,8 @@ class DatabaseModule {
     fun provideDatabase(@ApplicationContext context: Context): AppDatabase = Room.databaseBuilder(
         context,
         AppDatabase::class.java, "AppsMtv.db"
-    ).allowMainThreadQueries()
+    ).fallbackToDestructiveMigration()
+        .allowMainThreadQueries()
         .openHelperFactory(factory)
         .build()
 
