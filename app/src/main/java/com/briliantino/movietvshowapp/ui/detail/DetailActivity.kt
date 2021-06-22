@@ -111,14 +111,15 @@ class DetailActivity : AppCompatActivity() {
         activityDetailBinding.fabFavorite.setOnClickListener{
             statusFavorite = !statusFavorite
             detailViewModel.setFavoriteMovie(movie,statusFavorite)
-            setFavoriteState(state)
-            when(state){
+            setFavoriteState(statusFavorite)
+            when(statusFavorite){
                 false -> Toast.makeText(this,"Add to Favorite!",Toast.LENGTH_SHORT).show()
                 true -> Toast.makeText(this,"Delete From Favorite!",Toast.LENGTH_SHORT).show()
             }
         }
 
     }
+
 
     private fun populateTvShow(tvShow: TvShow) {
 
@@ -136,13 +137,11 @@ class DetailActivity : AppCompatActivity() {
         activityDetailBinding.tvItemVote.text = resources.getString(R.string.vote, tvShow.voteCount.toString())
         activityDetailBinding.tvDescription.text = tvShow.overview
 
-
-
         activityDetailBinding.fabFavorite.setOnClickListener{
             statusFavorite = !statusFavorite
             detailViewModel.setFavoriteTvShow(tvShow,statusFavorite)
-            setFavoriteState(state)
-            when(state){
+            setFavoriteState(statusFavorite)
+            when(statusFavorite){
                 false -> Toast.makeText(this,"Add to Favorite!",Toast.LENGTH_SHORT).show()
                 true -> Toast.makeText(this,"Delete From Favorite!",Toast.LENGTH_SHORT).show()
             }
