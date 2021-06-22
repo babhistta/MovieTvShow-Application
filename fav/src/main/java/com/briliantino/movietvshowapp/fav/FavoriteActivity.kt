@@ -1,10 +1,11 @@
 package com.briliantino.movietvshowapp.fav
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.briliantino.movietvshowapp.di.FavoriteModuleDependencies
 import com.briliantino.movietvshowapp.fav.databinding.ActivityFavoriteBinding
 import dagger.hilt.android.EntryPointAccessors
+
 
 class FavoriteActivity : AppCompatActivity() {
 
@@ -28,8 +29,16 @@ class FavoriteActivity : AppCompatActivity() {
         val sectionsPagerAdapter = FavoriteSectionsPagerAdapter(this, supportFragmentManager)
         binding.viewPager.adapter = sectionsPagerAdapter
         binding.tabs.setupWithViewPager(binding.viewPager)
+
         supportActionBar?.elevation = 0f
         supportActionBar?.title = "Favorite"
+
+    }
+
+    override fun onRestart() {
+        super.onRestart()
+        finish()
+        startActivity(intent)
     }
 
 

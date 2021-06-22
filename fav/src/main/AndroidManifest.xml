@@ -14,7 +14,8 @@
     </dist:module>
 
     <application>
-        <activity android:name=".FavoriteActivity">
+        <activity android:name=".FavoriteActivity"
+            android:parentActivityName="com.briliantino.movietvshowapp.ui.home.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />

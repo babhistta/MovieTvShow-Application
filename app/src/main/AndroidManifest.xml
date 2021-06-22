@@ -13,7 +13,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MovieTvShowApp">
         <activity
-            android:name="com.briliantino.movietvshowapp.ui.detail.DetailActivity">
+            android:name="com.briliantino.movietvshowapp.ui.detail.DetailActivity"
+            android:parentActivityName="com.briliantino.movietvshowapp.ui.home.MainActivity">
         </activity>
         <activity
             android:name="com.briliantino.movietvshowapp.ui.SplashScreenActivity"

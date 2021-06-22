@@ -19,7 +19,6 @@ import dagger.hilt.android.AndroidEntryPoint
 class DetailActivity : AppCompatActivity() {
     private var mId: Int = 0
     private var tvId: Int = 0
-    private var state = false
     private lateinit var activityDetailBinding: ActivityDetailBinding
 
     companion object {
@@ -48,9 +47,7 @@ class DetailActivity : AppCompatActivity() {
                             movie.data?.let {
                                 detailViewModel.setMovieList(it)
                                 populateMovie(it)
-                                state = it.favorite
-
-                                setFavoriteState(state)
+                                setFavoriteState(it.favorite)
                             }
                         }
                         Status.ERROR -> {
@@ -70,8 +67,7 @@ class DetailActivity : AppCompatActivity() {
                             tvShow.data?.let {
                                 detailViewModel.setTvShowList(it)
                                 populateTvShow(it)
-                                state = it.favorite
-                                setFavoriteState(state)
+                                setFavoriteState(it.favorite)
                             }
                         }
                         Status.ERROR -> {
@@ -113,9 +109,10 @@ class DetailActivity : AppCompatActivity() {
             detailViewModel.setFavoriteMovie(movie,statusFavorite)
             setFavoriteState(statusFavorite)
             when(statusFavorite){
-                false -> Toast.makeText(this,"Add to Favorite!",Toast.LENGTH_SHORT).show()
-                true -> Toast.makeText(this,"Delete From Favorite!",Toast.LENGTH_SHORT).show()
+                true -> Toast.makeText(this,"Add to Favorite!",Toast.LENGTH_SHORT).show()
+                 false -> Toast.makeText(this,"Delete From Favorite!",Toast.LENGTH_SHORT).show()
             }
+            onPause()
         }
 
     }
@@ -142,9 +139,10 @@ class DetailActivity : AppCompatActivity() {
             detailViewModel.setFavoriteTvShow(tvShow,statusFavorite)
             setFavoriteState(statusFavorite)
             when(statusFavorite){
-                false -> Toast.makeText(this,"Add to Favorite!",Toast.LENGTH_SHORT).show()
-                true -> Toast.makeText(this,"Delete From Favorite!",Toast.LENGTH_SHORT).show()
+                true -> Toast.makeText(this,"Add to Favorite!",Toast.LENGTH_SHORT).show()
+                false -> Toast.makeText(this,"Delete From Favorite!",Toast.LENGTH_SHORT).show()
             }
+            onPause()
         }
 
     }
