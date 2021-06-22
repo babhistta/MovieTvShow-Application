@@ -1,9 +1,5 @@
 package com.briliantino.movietvshowapp.core.domain.model
 
-import android.os.Parcelable
-import kotlinx.parcelize.Parcelize
-
-@Parcelize
 data class TvShow(
 
         val id: Int,
@@ -14,4 +10,4 @@ data class TvShow(
         val voteCount: Int,
         var favorite: Boolean = false
 
-) : Parcelable
+)
